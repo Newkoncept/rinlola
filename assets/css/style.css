@@ -1,0 +1,277 @@
+/* GENERAL STYLING */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  color: blanchedalmond;
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+/* COLOR */
+.bg-black {
+  background: #000000;
+}
+
+/* CLASS  */
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-6 {
+  width: 50%;
+}
+.col-5 {
+  width: 48%;
+}
+/* NAVIGATION BAR */
+nav {
+  background: transparent;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .menu {
+  display: flex;
+}
+.nav-item.right {
+  padding-right: 50px;
+}
+.nav-item a {
+  color: #fff;
+}
+
+/* HOME PAGE */
+.homepage {
+  height: calc(100vh - 52px);
+  width: 100%;
+  background: red;
+}
+
+/* PROJECT PAGE */
+.project-bg {
+  background: #1c1944;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+.project-container {
+  width: 60%;
+  margin: auto;
+  max-width: 100%;
+  position: relative;
+  margin-top: 40px;
+}
+.project-main {
+  margin-bottom: 20px;
+  height: 250px;
+  position: relative;
+}
+.project-main img {
+  width: 100%;
+  height: inherit;
+}
+.project-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.project-sub {
+  height: 250px;
+  position: relative;
+}
+.project-sub img {
+  max-width: 100%;
+  width: 100%;
+  height: inherit;
+}
+.project-main p,
+.project-sub p {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: all 0.5s;
+  font-size: 40px;
+}
+.project-main p {
+  background: #ff0000be;
+}
+.project-sub-one p {
+  background: #000000d8;
+}
+.project-sub-two p {
+  background: #ffee00be;
+}
+.project-main p:hover,
+.project-sub p:hover {
+  opacity: 100%;
+  transition: all 0.9s;
+}
+
+/* CONTACT PAGE */
+.contact-bg {
+  height: 100vh;
+  width: 100%;
+  background: url("../img/1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact-overlay {
+  background: #282364a4;
+  height: inherit;
+}
+.contact-overlay .row {
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 90%;
+}
+.contact-main {
+  width: 50%;
+  margin: auto;
+}
+.contact-box * {
+  color: #1c1944;
+}
+.contact-box {
+  background: #fff;
+  margin: auto;
+  padding: 70px 55px;
+}
+.contact-box h1 {
+  margin-bottom: 40px;
+}
+.contact-box p {
+  margin-bottom: 15px;
+}
+.contact-box form {
+  margin-top: 40px;
+}
+.contact-box input {
+  padding: 10px 10px;
+  width: 60%;
+  margin-right: 10px;
+  border: 1px solid #babac7;
+}
+.contact-box input::placeholder {
+  color: #babac7;
+}
+.contact-btn {
+  padding: 10px 40px;
+  color: #fff;
+  background: #1c1944;
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  /* width: 40%; */
+}
+.social-media {
+  text-align: right;
+}
+.social-media i {
+  color: #fff;
+  padding-right: 20px;
+  margin-top: 30px;
+}
+.social-media i:hover {
+  font-size: 20px;
+  transition: 0.3s;
+}
+.social-media .no-pr {
+  padding-right: 0px;
+}
+.contact-footer {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  width: 100%;
+  font-style: italic;
+}
+.contact-footer p {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  /* PROJECT PAGE */
+  .project-container {
+    width: 70%;
+    margin: auto;
+    max-width: 100%;
+    position: relative;
+    margin-top: 40px;
+  }
+
+  /* CONTACT PAGE */
+  .contact-main {
+    width: 90%;
+  }
+}
+@media (max-width: 420px) {
+  /* GENERAL STYLING AND CLASS STYLING */
+  .container {
+    width: 90%;
+  }
+  .col-6 {
+    width: 100%;
+  }
+  .col-5 {
+    width: 100%;
+  }
+
+  /* NAVIGATION BAR */
+  .nav-item.right {
+    padding-right: 30px;
+  }
+
+  /* PROJECT PAGE */
+  .project-bg {
+    background: #1c1944;
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+  }
+  .project-sub {
+    margin-bottom: 20px;
+  }
+
+  /* CONTACT PAGE */
+  .contact-main {
+    width: 100%;
+  }
+  .contact-box {
+    padding: 70px 30px;
+  }
+  .contact-box form {
+    width: 100%;
+    max-width: 100%;
+  }
+  .contact-box input {
+    width: 93%;
+    display: block;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+  }
+  .contact-btn {
+    width: 100%;
+    display: block;
+    padding: 10px 0;
+  }
+}
