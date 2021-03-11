@@ -257,8 +257,11 @@ nav .menu {
     width: 100%;
   }
   .contact-box {
-    padding: 40px 30px;
+    padding: 20px 30px;
   }
+  .contact-box h1 {
+  margin-bottom: 20px;
+}
   .contact-box form {
     width: 100%;
     max-width: 100%;
