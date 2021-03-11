@@ -5,6 +5,9 @@
   box-sizing: content-box;
   color: blanchedalmond;
 }
+body {
+  position: relative;
+}
 a {
   text-decoration: none;
 }
