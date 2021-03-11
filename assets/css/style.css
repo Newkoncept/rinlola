@@ -1,3 +1,7 @@
+@font-face {
+  font-family: p;
+  src: url(../Poppins/Poppins-Light.ttf);
+}
 /* GENERAL STYLING */
 * {
   margin: 0;
@@ -7,6 +11,7 @@
 }
 body {
   position: relative;
+  font-family: p, sans-serif;
 }
 a {
   text-decoration: none;
@@ -31,12 +36,19 @@ li {
   flex-wrap: wrap;
 }
 
+.col-8 {
+  width: 60%;
+}
 .col-6 {
   width: 50%;
 }
 .col-5 {
   width: 48%;
 }
+.col-2 {
+  width: 40%;
+}
+
 /* NAVIGATION BAR */
 nav {
   background: transparent;
@@ -58,9 +70,62 @@ nav .menu {
 
 /* HOME PAGE */
 .homepage {
-  height: calc(100vh - 52px);
+  background: url("../img/rinlolabg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
   width: 100%;
-  background: red;
+  overflow: hidden;
+}
+.homepage .row {
+  height: inherit;
+}
+.rinlola {
+  height: inherit;
+  max-width: 100%;
+}
+.rinlola-about {
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 140px;
+}
+.rinlola-about * {
+  color: #ffffff;
+}
+.text-container {
+  width: 55%;
+  padding-left: 80px;
+}
+.home-name {
+  color: #535a6f;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+.home-design span,
+.home-spacer {
+  color: #ffe600;
+}
+.home-service {
+  margin-bottom: 50px;
+  font-size: 45px;
+  line-height: 1;
+  text-shadow: 3px 2px #212122;
+}
+.home-design {
+  font-size: 80px;
+}
+.home-summary {
+  font-style: italic;
+  margin-bottom: 20px;
+}
+.home-spacer {
+  margin: 0 10px;
+  font-style: normal;
+}
+.home-description span {
+  border: 2px solid #ffe600;
+  margin-right: 2px;
 }
 
 /* PROJECT PAGE */
@@ -213,6 +278,15 @@ nav .menu {
 }
 
 @media (max-width: 768px) {
+  /* HOMEPAGE */
+  .homepage {
+    background-position: center top;
+  }
+  .text-container {
+    width: 90%;
+    padding-left: 0px;
+  }
+
   /* PROJECT PAGE */
   .project-container {
     width: 70%;
@@ -244,6 +318,24 @@ nav .menu {
     padding-right: 30px;
   }
 
+  /* HOMEPAGE */
+  .homepage {
+    background-size: cover;
+    background-position: bottom;
+  }
+  .text-container {
+    width: 90%;
+    padding-left: 0px;
+  }
+  .hide {
+    display: none;
+  }
+  .rinlola-about {
+    margin-bottom: 90px;
+    align-items: flex-end;
+    justify-content: center;
+  }
+
   /* PROJECT PAGE */
   .project-bg {
     background: #1c1944;
@@ -260,11 +352,8 @@ nav .menu {
     width: 100%;
   }
   .contact-box {
-    padding: 50px 30px;
+    padding: 70px 30px;
   }
-  .contact-box h1 {
-  margin-bottom: 30px;
-}
   .contact-box form {
     width: 100%;
     max-width: 100%;
@@ -280,7 +369,4 @@ nav .menu {
     display: block;
     padding: 10px 0;
   }
-  .contact-footer {
-  bottom: 3px;
-}
 }
